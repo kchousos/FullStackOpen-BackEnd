@@ -1,0 +1,7 @@
+## This file is meant to be used with the `restclient.el`
+## (https://github.com/pashky/restclient.el) emacs package. But, the
+## syntax is fairly similiar to other REST clients e.g. that of
+## VSCode.
+
+# Get all persons
+GET http://localhost:3001/api/persons

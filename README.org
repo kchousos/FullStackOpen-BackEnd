@@ -1,0 +1,11 @@
+* FullStackOpen (Back-end)
+
+#+HTML: <img src="./img.svg" align="right" width="100">
+
+This repo contains my solutions to the *part 3* exercises of the online course "Full Stack Open" by the University of Helsinki.
+
+Is is hosted in a different repo than the [[https://github.com/kchousos/FullStackOpen][rest]] of my solutions because of the following guideline:
+
+#+begin_quote
+It's recommended to do all of the exercises from this part into a new dedicated git repository, and place your source code right at the root of the repository. Otherwise, you will run into problems in exercise 3.10.
+#+end_quote
