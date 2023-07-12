@@ -2,7 +2,7 @@
 
 #+HTML: <img src="./img.svg" align="right" width="100">
 
-This repo contains my solutions to the *part 3* exercises of the online course "Full Stack Open" by the University of Helsinki.
+This repo contains my solutions to the *part 3* exercises of the online course "Full Stack Open" by the University of Helsinki. You can find the site hosted at https://kcphonebook.onrender.com.
 
 Is is hosted in a different repo than the [[https://github.com/kchousos/FullStackOpen][rest]] of my solutions because of the following guideline:
 
