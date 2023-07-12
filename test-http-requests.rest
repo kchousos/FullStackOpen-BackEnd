@@ -15,10 +15,25 @@ Content-Type: application/json
    "name": "Alonzo Church",
     "number": "040-654321"
 }
-# Add a person without a number
+# Add a person without a number (error expected)
 POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-   "name": "Donald Knuth"
+   "name": "Alonzo Church"
 }
+# Add a person without a name (error expected)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+   "number": "123456789"
+}
+# Add a person that is already in the list (error expected)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+   "name": "Arto Hellas",
+   "number": "123456789"
+}        
