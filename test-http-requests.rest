@@ -7,3 +7,18 @@
 GET http://localhost:3001/api/persons
 # Delete a persons
 DELETE http://localhost:3001/api/persons/3
+# Add a person with a number
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+   "name": "Alonzo Church",
+    "number": "040-654321"
+}
+# Add a person without a number
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+   "name": "Donald Knuth"
+}
