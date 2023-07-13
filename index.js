@@ -22,12 +22,11 @@ app.get('/api/persons', (request, response) => {
 })
 
 app.get('/info', (request, response) => {
-  const people = persons.length
-  const date = new Date()
+  Person.find({}).then(persons => {
   response.send(`\
-    <p>Phonebook has info for ${people} people</p>\
-    <p>${date}</p>
-  `)
+    <p>Phonebook has info for ${persons.length} people</p>\
+    <p>${new Date()}</p>`)
+  })
 })
 
 app.get('/api/persons/:id', (request, response, next) => {
@@ -39,6 +38,21 @@ app.get('/api/persons/:id', (request, response, next) => {
 app.delete('/api/persons/:id', (request, response, next) => {
   Person.findByIdAndRemove(request.params.id)
     .then(result => response.status(204).end())
+    .catch(error => next(error))
+})
+
+app.put('/api/persons/:id', (request, response, next) => {
+  const body = request.body
+
+  const person = {
+    name: body.name,
+    number: body.number,
+  }
+
+  Person.findByIdAndUpdate(request.params.id, person, { new: true })
+    .then(updatedPerson => {
+      response.json(updatedPerson)
+    })
     .catch(error => next(error))
 })
 
