@@ -9,9 +9,18 @@
     "ecmaVersion": "latest"
   },
   "rules": {
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "eqeqeq": "error",
     "indent": [
       "error",
       2
     ],
+    "semi": [
+      "error",
+      "never"
+    ]
   }
 }
